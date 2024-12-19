@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1>Stock Technical Analysis</h1>
+    <div class="analysis-form">
+        <form id="analysisForm">
+            <div class="form-group">
+                <label for="ticker">Stock Ticker:</label>
+                <input type="text" id="ticker" name="ticker" placeholder="e.g., AAPL" required>
+            </div>
+
+            <div class="form-group">
+                <label for="endDate">End Date (Optional):</label>
+                <input type="date" id="endDate" name="endDate">
+            </div>
+
+            <div class="form-group">
+                <label for="lookbackDays">Lookback Days:</label>
+                <input type="number" id="lookbackDays" name="lookbackDays" value="365" min="1" required>
+            </div>
+
+            <div class="form-group">
+                <label for="crossoverDays">Crossover Days:</label>
+                <input type="number" id="crossoverDays" name="crossoverDays" value="180" min="1" required>
+            </div>
+
+            <button type="submit" id="analyzeButton">Analyze</button>
+        </form>
+        <div id="loadingMessage" class="loading-message" style="display: none;">
+            Analyzing data, please wait...
+        </div>
+        <div id="errorMessage" class="error-message" style="display: none;"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+{% endblock %}
