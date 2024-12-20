@@ -289,7 +289,7 @@ class VisualizationService:
         return annotations
 
     @staticmethod
-    def create_stock_analysis_chart(data, analysis_dates, ratios, prices, 
+    def create_stock_analysis_chart(symbol, data, analysis_dates, ratios, prices, 
                                   appreciation_pcts, regression_results, 
                                   crossover_data, signal_returns, 
                                   metrics_df, total_height=1000):
@@ -466,7 +466,7 @@ class VisualizationService:
         # Update layout
         fig.update_layout(
             title=dict(
-                text=f'Technical Analysis ({days} Days)',
+                text=f'{symbol} Technical Analysis ({days} Days)',
                 x=0.5,
                 xanchor='center',
                 font=dict(size=24)
