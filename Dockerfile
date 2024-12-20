@@ -10,6 +10,6 @@ COPY . .
 ENV FLASK_APP=run.py
 ENV FLASK_ENV=production
 
-EXPOSE 8000
+EXPOSE 3000
 
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "run:app"]
+CMD ["gunicorn", "--bind", "0.0.0.0:3000", "run:app"]
