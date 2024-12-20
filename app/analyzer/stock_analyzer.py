@@ -65,7 +65,7 @@ def create_stock_visualization(
         analysis_df = AnalysisService.analyze_stock_data(historical_data, crossover_days)
         
         # Perform regression analysis
-        regression_results = AnalysisService.perform_polynomial_regression(historical_data, future_days=180)
+        regression_results = AnalysisService.perform_polynomial_regression(historical_data, future_days=lookback_days)
         
         # Find crossover points
         crossover_data = AnalysisService.find_crossover_points(
