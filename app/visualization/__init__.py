@@ -1,4 +1,3 @@
-from visualization.visualization_service import VisualizationService
-from visualization.creator import create_stock_visualization
+from .visualization_service import VisualizationService
 
-__all__ = ['create_stock_visualization', 'VisualizationService']
+__all__ = ['VisualizationService']

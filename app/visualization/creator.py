@@ -1,11 +1,11 @@
 # src/visualization/creator.py
 import pandas as pd
 from datetime import datetime
-from config.metrics_config import METRICS_TO_FETCH, ANALYSIS_DEFAULTS
-from config.api_config import ROIC_API
-from data.data_service import DataService
-from analysis.analysis_service import AnalysisService
-from visualization.visualization_service import VisualizationService
+from app.config.metrics_config import METRICS_TO_FETCH, ANALYSIS_DEFAULTS
+from app.config.api_config import ROIC_API
+from app.data.data_service import DataService
+from app.analysis.analysis_service import AnalysisService
+from app.visualization.visualization_service import VisualizationService
 
 def create_stock_visualization(
     ticker: str, 

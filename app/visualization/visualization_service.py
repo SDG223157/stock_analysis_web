@@ -4,7 +4,7 @@ import plotly.graph_objects as go
 import pandas as pd
 import numpy as np
 from datetime import datetime, timedelta
-from config.layout_config import LAYOUT_CONFIG, CHART_STYLE, TABLE_STYLE
+from app.config.layout_config import LAYOUT_CONFIG, CHART_STYLE, TABLE_STYLE
 
 class VisualizationService:
     """Service class for creating and managing stock analysis visualizations."""
